@@ -1,0 +1,63 @@
+{%extends 'base.html'%}
+
+{%block title%} 
+Questions Feed 
+{%endblock%}
+{%block styles%} 
+<link rel = "stylesheet" href="styles.css"> 
+{%endblock%}
+{%block content%} 
+
+{%include './includes/navbar.html'%}
+{%include './includes/coursebar.html'%}
+
+<h2>Congratulations {username}, You have completed the {coursename.upper()} Quiz.</h2>
+
+<hr>
+
+Total Questions : question.count
+<br>
+Correct Answers : question.correct.count
+<br>
+% Correct       :  correct_ans/question.count * 100 % 
+<br>
+<h3> Total Score :  total_score </h3>
+<i> You beat ....% of the scorers !! </i>
+
+<hr> 
+
+<h2>Review Your Answers Here</h2>
+
+{% for question in questions %}
+<div class="card">
+    <div class="card-header">
+        Question # {{question.id}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{question.questiona}}</p>
+        <footer class="blockquote-footer">{{(question.course_id).course_name}} <cite title="Source Title">{{(question.topic_id).topic}}</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">a. {{question.option_a}}</li>
+    <li class="list-group-item">b. {{question.option_b}}</li>
+    <li class="list-group-item">c. {{question.option_c}}</li>
+    <li class="list-group-item">d. {{question.option_d}}</li>
+    <br/>
+    <li class="list-group-item"> Correct Answer : <h3>{{question.answer}} </h3> </li>
+    <li class="list-group-item"> Score : {{question.score}}</li>
+  </ul>
+  <hr>
+  <div class="card-body">
+    <li class="list-group-item"> Your Answer : <h3>{{question.selected_option}} </h3> </li>
+    <li class="list-group-item"> Score : <h3>{{question.score}} </h3> </li>
+  </div>
+  <hr>
+
+{% endfor %}
+
+{%endblock%}
+
+<!-- {{url_for('question.edit_question', question_id=question.id)}} -->

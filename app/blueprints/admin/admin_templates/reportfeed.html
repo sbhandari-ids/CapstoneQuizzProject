@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block title%} 
+Questions Feed 
+{%endblock%}
+{%block styles%} 
+<link rel = "stylesheet" href="styles.css"> 
+{%endblock%}
+{%block content%} 
+
+{%include './includes/navbar.html'%}
+<h1>Question Reported by User</h1>
+
+{% for report in reports %}
+<div class="card">
+    <div class="card-header">
+        Report # {{report.id}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{report.report_message}}</p>
+        <footer class="blockquote-footer">{{(report.question_id)}} <cite title="Source Title">{{(report.user_id}</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+  
+ <hr>
+{% endfor %}
+
+{%endblock%}

@@ -1,0 +1,110 @@
+This is my Project Plan for Capston Quiz Project. 
+
+
+Features to Add : 
+Quizzes 
+Exercises
+Search and Read Articles
+
+
+Additional features (future) : 
+Dark/Light screen toggle button
+AI Welcome to Quiz Message.
+API Section 
+API Questions on Quiz Section
+Quiz breakdown - 4-10 quiz per course.
+Hint on Questions. Taking hint will take 5points off the question. 
+
+
+
+
+for(i=0; i< len(question_list); i++):
+    question_id = random.randint(question_list)
+
+    display_card.question_id
+
+    if(user_hits_submit):
+        break; 
+    question_id.pop(question_list) // so as not to repeat the same question again. 
+    or, question_id.append(displayed_item)
+
+    
+
+
+# Requirements:
+create a form that will take in a username, password, and email from my user.
+This form should also be CSRF protected
+and use the same url endpoint for both Get and Post requests
+
+Need a new page for the sign up form
+-creat signup.html template
+-add navbar to this template
+-update navbar to route to this template
+
+TRASH
+
+need a signup route
+- Get and Post
+- import SignUpForm
+- On Get request render_template('signup.html', form=form)
+- On Post extract form data and return that data
+
+need a new FlaskForm
+- username StringField
+- email EmailField
+- password PasswordField
+- submit button SubmitField
+
+
+
+
+# adding Posts to our app
+
+#post blueprint
+
+#post route
+
+#post form
+
+#post model ---DONE
+
+#create_post template
+
+#feed to view post outside of my database
+
+
+
+Environment SetUp : 
+install python 
+install vscode
+
+open vscode
+create a new flask project : 
+$ mkdir myproject
+$ cd myproject
+
+create a virtual environment(venv)  
+python3 -m venv .venv # (we named it : .venv)
+activate the venv : source .venv/bin/activate
+
+Install Flask and other Dependencies : 
+pip install Flask
+pip install flask-migrate
+pip install flask-sqlalchemy
+pip install psycopg2-binary
+
+pip install -U Flask-WTF
+
+
+
+
+
+Requirements : 
+1. Application will have two sides : Admin and UserInterface
+
+1.1. Admin : User logs in as Admin User with email adminuser@gmail.com / adminuser@capstone
+1.1.1 Admin will have access to Admin Portal as well as UserInterface
+..2 Admin can add/edit/delete questions/courses/topics/ and other quiz related data.
+..3 Admin can assign/revoke admin logins to/off other users. 
+..4 
+

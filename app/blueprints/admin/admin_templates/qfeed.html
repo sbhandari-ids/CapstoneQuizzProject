@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+
+{%block title%} 
+Questions Feed 
+{%endblock%}
+{%block styles%} 
+<link rel = "stylesheet" href="styles.css"> 
+{%endblock%}
+{%block content%} 
+
+{%include './includes/navbar.html'%}
+<h1>Welcome to the Question Lists</h1>
+
+{% for question in questions %}
+<div class="card">
+    <div class="card-header">
+        Question # {{question.id}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{question.questiona}}</p>
+        <footer class="blockquote-footer">{{(question.course_id).course_name}} <cite title="Source Title">{{(question.topic_id).topic}}</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">a. {{question.option_a}}</li>
+    <li class="list-group-item">b. {{question.option_b}}</li>
+    <li class="list-group-item">c. {{question.option_c}}</li>
+    <li class="list-group-item">d. {{question.option_d}}</li>
+  </ul>
+  <hr>
+  
+  <div class="card-body">
+      <a href="{{url_for('admin.edit_question', question_id=question.id)}}" class="btn btn-info" id="edit" name="edit"> Edit  </a>
+      <a href="{{url_for('admin.delete_question', question_id = question.id)}}" class="btn btn-danger" id="delete" name="delete"> Delete </a>
+  </div>
+
+  <hr>
+
+{% endfor %}
+
+{%endblock%}
+
+<!-- {{url_for('question.edit_question', question_id=question.id)}} -->

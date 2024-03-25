@@ -1,0 +1,61 @@
+{%extends 'base.html'%}
+
+{%block title%} 
+Questions Feed 
+{%endblock%}
+{%block styles%} 
+<link rel = "stylesheet" href="#"> 
+{%endblock%}
+{%block content%} 
+
+{%include './includes/navbar.html'%}
+{%include './includes/coursebar.html'%}
+
+<h1>Welcome to the Question Lists</h1>
+
+{% for question in questions %}
+<div class="card">
+    <div class="card-header">
+        Question # {{question.id}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{question.questiona}}</p>
+        <footer class="blockquote-footer">{{(question.course_id).course_name}} <cite title="Source Title">{{(question.topic_id).topic}}</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">a. {{question.option_a}}</li>
+    <li class="list-group-item">b. {{question.option_b}}</li>
+    <li class="list-group-item">c. {{question.option_c}}</li>
+    <li class="list-group-item">d. {{question.option_d}}</li>
+  
+  <hr>
+  <li class="list-group-item">Answer : {{question.selected_option }}</li>
+<hr>
+</ul>
+
+<div class="card-body">
+    Report This Question 
+    <br/>
+    <textarea cols="70" placeholder="tell us if something is not right with this question"></textarea>
+    <br/>
+     <button type="button my-btn" id="report" name="report"> Report </button>
+   </div>
+
+   <hr>
+
+ <div class="card-body">
+   <button type="button my-btn" id="prev" name="prev"> << Previous </button>
+   <button type="button my-btn" id="prev" name="prev"> Next >>  </button>
+ </div>
+</div>
+
+ <hr>
+
+{% endfor %}
+
+{%endblock%}
+
+<!-- {{url_for('question.edit_question', question_id=question.id)}} -->

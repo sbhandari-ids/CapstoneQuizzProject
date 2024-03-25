@@ -1,0 +1,18 @@
+
+
+
+.submit_btn{
+    background-color: rgb(13, 157, 214);
+    color: whitesmoke;
+    font-weight: 400;
+    font-size:x-large;
+    align-items: center;
+    width: 100%;
+    
+}
+.submit_btn:hover{
+    background-color:  rgb(13, 157, 214);
+    color: whitesmoke; 
+}
+
+

@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+
+{%block title%} 
+Sign Up 
+{%endblock%}
+{%block styles%} 
+<link rel = "stylesheet" href = "../static/styles/signup.css " >
+{%endblock%}
+{%block content%} 
+{%include './includes/navbar.html'%}        
+<div class = "flex-container">
+<form method = 'POST'>
+    {{form.hidden_tag()}}
+          <h2 class="title-txt">Manage Topics</h2>
+     <div class="mb-3">
+      <label for="topic" class="form-label">Topic </label>
+        {{form.topic(class='form-control', id="topic")}}
+    <div class="mb-3">
+      <label for="course_id" class="form-label">Course </label>
+      {{form.course_id(class='form-control', id="course_id")}}
+    <div class="mb-3">
+
+      {{form.submit_btn(class='btn my-btn', id='btn_course')}}
+  </form>
+</div>
+{%endblock%}
+
+<!-- <h1><u>Manage Topics</u></h1>
+    Topic Name : <input type="text"; placeholder="Enter Topic Name here" name="topic_name">
+    <br><br>
+
+    <input type="option" 
+    <label for="course_name">Choose a CourseName:</label>
+    <select id="course_name" name="course_name">
+      <option value="python">Python</option>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="javascript">JavaScript</option>
+      <option value="sql">SQL</option>
+
+    </select>
+    <br><br>
+    <button type="submit">Submit</button> -->

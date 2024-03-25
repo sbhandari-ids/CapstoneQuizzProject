@@ -1,0 +1,51 @@
+{%extends 'base.html'%}
+
+{%block title%} 
+Home 
+{%endblock%}
+{%block styles%} 
+<link rel = "stylesheet" href="styles.css"> 
+{%endblock%}
+{%block content%} 
+
+{%include './includes/navbar.html'%}
+{%include './includes/coursebar.html'%}
+<h1>Welcome to the Learning Basics</h1>
+
+<div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="true" href="#"><strong> Quiz </strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Exercise</a>
+        </li>
+        <li class="nav-item">
+          
+          <a class="nav-link active" href="#">Learn</a>
+          
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary" onclick="startQuiz()">Start Quiz </a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Search to Learn</h5>
+      <p class="card-text"><i>Search for related online articles</i></p>
+      <script async src="https://cse.google.com/cse.js?cx=e1269415a966c4861">
+      </script>
+      <div class="gcse-searchbox"></div>
+    </div>
+    <div>
+      <div class="gcse-searchresults"></div>
+    </div>
+  </div>
+
+  {%include './includes/footer.html'%}
+
+{%endblock%}
+

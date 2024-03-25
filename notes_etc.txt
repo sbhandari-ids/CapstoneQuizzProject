@@ -1,0 +1,57 @@
+Project Capstone
+
+Create a postgresDB. Created learn_the_basics_db in elephantSQL.
+
+1. List of 25 questions each : HTML CSS Python JS SQL TypeScript Git/GitHUB WebDevelopment/Internet
+2. ERD Diagram of the DATABASE Outline. Linst of Tables : 
+    1. Users Table ( Signup, Logi
+
+
+
+
+
+
+
+
+1. Admin Page to enter the data to database. Fields would be :
+    1. Question : Option A : Option B : Option C: Option D : Question Tag : Answer : Course
+    2. Maintain a spreadsheet file with all the questions/ options and answers. Add the file to hidden_folders/resources in the project.
+
+ 
+
+How to enter all the data :
+	1. Using for Loop in flask models page and entering the questions (Bulk)
+	2. Using Admin page to entering new question to the application. 
+	3. Running Insert Into Queries into the ElephantSQL. 
+
+
+
+List of Tables :
+
+User Table : {user_id, username, email, password, member_since}
+Course table : { course_id, course_name}
+user_course table : {user_id, course_id}
+Questions Table { question_id, question, optionA, optionB, optionC, optionD, answer, course_id, topic_id, weightage_id}
+Score Table : {weightage_id, weight_category, points}
+user_question table : {user_id, question_id}
+user_activity table : {final_score, submit_date}
+question_reported table : {report_id,  report_message, report_date, question_id,  user_id}
+
+
+Admin Login Requirements : 
+Following forms required under Admin Section for Quiz Management
+UserManagement( change somebody to Admin from Admin page)-Priority Low 
+Course
+Topics
+Questions
+Question_Weightage
+
+
+Process : 
+User Signs Up : Data stored as UserTable.
+Course Enter : Adds up as Course Table. : Default  value: general
+Topic Enter : Adds up as Topic Table. : Default value : general
+Question Enter : Adds up as Question Table.
+
+
+

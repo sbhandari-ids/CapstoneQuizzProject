@@ -1,0 +1,29 @@
+database_name : learn_the_basics_db on ElephantSQL / login with github
+ERD : Quizzes on LucidChart.com / loginwith sbhandari1.ids
+Questionnaire : GoogleSheet attached to the project Folder. 
+Project Plan : 
+
+
+
+
+Shuffle React Icon
+Codes
+import { IoShuffle } from "react-icons/io5";
+<IoShuffle />
+io5
+IoShuffle
+io5/IoShuffle
+import { IoShuffle } from "react-icons/io5";
+<IoShuffle />
+
+Play React Icon :
+Codes
+import { FaPlay } from "react-icons/fa";
+<FaPlay />
+fa
+FaPlay
+fa/FaPlay
+import { FaPlay } from "react-icons/fa";
+<FaPlay />
+
+

@@ -1,0 +1,109 @@
+{%extends 'base.html'%}
+
+{%block title%} 
+Home 
+{%endblock%}
+{%block styles%} 
+<link rel = "stylesheet" href="pokemon_style.css"> 
+{%endblock%}
+{%block content%} 
+
+{%include './includes/navbar.html'%}
+<h1>Welcome to the Learning Basics Quiz Home</h1>
+
+<div class="card">
+    <div class="card-header">
+        Question # {question.id}}
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>Welcome to the Learning Basics Quiz Home{question.question}}</p>
+        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{question.option_a}}</li>
+    <li class="list-group-item">{question.option_b}}</li>
+    <li class="list-group-item">{question.option_c}}</li>
+    <li class="list-group-item">{question.option_d}}</li>
+
+  </ul>
+  <hr>
+  <div class="card-body">
+     Report This Question <br/>
+     <textarea cols="70" placeholder="tell us if something is not right with this question"></textarea>
+     <br/>
+      <button type="button my-btn" id="report" name="report"> Report </button>
+    </div>
+
+    <hr>
+
+  <div class="card-body">
+    <button type="button my-btn" id="prev" name="prev"> >> Previous </button>
+    <button type="button my-btn" id="prev" name="prev"> Next >>  </button>
+  </div>
+</div>
+  
+
+<!--
+   {% for each in question %}
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Question #{{question.id}}}</h5>
+      <p class="card-text">{{question.question}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{question.option_a}}</li>
+      <li class="list-group-item">{{question.option_b}}</li>
+      <li class="list-group-item">{{question.option_c}}</li>
+      <li class="list-group-item">{{question.option_d}}</li>
+
+    </ul>
+    <br/>
+    <hr>
+    <div class="card-body">
+       Report This Question
+       <textarea cols="100" placeholder="what's wrong with this question?"></textarea>
+        <button type="button my-btn" id="report" name="report"> Report </button>
+      </div>
+      <br/>
+      <hr>
+    <div class="card-body">
+      <a href="#" class="card-link"> Previous </a>
+      <a href="#" class="card-link"> Next </a>
+      <button type="button my-btn" id="prev" name="prev"> >> Previous </button>
+      <button type="button my-btn" id="prev" name="prev"> Next >>  </button>
+    </div>
+  </div>
+{% endfor %} 
+
+
+<!-- <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Question #question.id}}}</h5>
+    <p class="card-text">question.question</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{question.option_a}}</li>
+    <li class="list-group-item">{question.option_b}}</li>
+    <li class="list-group-item">{question.option_c}}</li>
+    <li class="list-group-item">{question.option_d}}</li>
+
+  </ul>
+  <div class="card-body">
+     Report This Question
+     <textarea cols="50" placeholder="what's wrong with this question?"></textarea>
+      <button type="button my-btn" id="report" name="report"> Report </button>
+    </div>
+
+  <div class="card-body">
+    <!- <a href="#" class="card-link"> Previous </a>
+    <a href="#" class="card-link"> Next </a> ->
+    <button type="button my-btn" id="prev" name="prev"> << Previous </button>
+    <button type="button my-btn" id="prev" name="prev"> Next >>  </button>
+  </div>
+</div> -->
+
+
+{% endblock %}
